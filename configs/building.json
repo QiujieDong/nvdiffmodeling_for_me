@@ -12,7 +12,7 @@
         0.0
     ],
     "random_textures": true,
-    "iter": 50000,
+    "iter": 5000,
     "save_interval": 1000,
     "texture_res": [
         1024,
@@ -22,5 +22,5 @@
     "batch": 8,
     "learning_rate": 0.03,
     "min_roughness": 0.25,
-    "out_dir": "building_50K"
+    "out_dir": "LOD0_c_hut_01"
 }
