@@ -439,8 +439,8 @@ def main():
     parser.add_argument('-rl', '--relative-laplacian', type=bool, default=False)
     parser.add_argument('-bg', '--background', default='checker', choices=['black', 'white', 'checker'])
     parser.add_argument('--loss', default='logl1', choices=['logl1', 'logl2', 'mse', 'smape', 'relativel2'])
-    parser.add_argument('-o', '--out-dir', type=str, default=None)
-    parser.add_argument('--config', type=str, default=None, help='Config file')
+    parser.add_argument('-o', '--out-dir', type=str, default='base')
+    parser.add_argument('--config', type=str, default='./configs/building.json', help='Config file')
     parser.add_argument('-rm', '--ref_mesh', type=str)
     parser.add_argument('-bm', '--base-mesh', type=str)
     
