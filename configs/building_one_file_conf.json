@@ -1,0 +1,18 @@
+{
+    "base_mesh": "data/sphere.obj",
+    "ref_mesh": "data/building/-LOD0_c_hut_01.obj",
+    "camera_eye": [ 2.5, 0.0, -2.5 ],
+    "camera_up": [ 0.0, 1.0, 0.0 ],
+    "random_textures": true,
+    "iter": 5000,
+    "save_interval": 1000,
+    "texture_res": [ 1024, 1024 ],
+    "train_res": 512,
+    "batch": 8,
+    "learning_rate": 0.03,
+    "min_roughness" : 0.25,
+    "light_power": 20.0,
+    "relative_laplacian": true,
+    "laplacian_factor": 80.0,
+    "out_dir" : "LOD0_c_hut_01_conf_lap80"
+}
