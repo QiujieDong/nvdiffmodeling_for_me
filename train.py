@@ -474,6 +474,8 @@ def main():
         file.strip()
         if os.path.splitext(file)[1] not in ['.obj']:
             continue
+        # if file != '-LOD0_c_hut_06.obj':
+        #     continue
         print(os.path.join(FLAGS.file_path, file))
 
         FLAGS.ref_mesh = os.path.join(FLAGS.file_path, file)
