@@ -11,7 +11,7 @@ https://arxiv.org/abs/2104.03989 <br>
 
 # License
 
-Copyright � 2021, NVIDIA Corporation. All rights reserved.
+Copyright © 2021, NVIDIA Corporation. All rights reserved.
 
 This work is made available under the [Nvidia Source Code License](https://github.com/NVlabs/nvdiffmodeling/blob/main/LICENSE.txt).
 
