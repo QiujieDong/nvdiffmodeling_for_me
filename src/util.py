@@ -88,7 +88,7 @@ def scale_img_hwc(x : torch.Tensor, size, mag='bilinear', min='area') -> torch.T
 def scale_img_nhwc(x  : torch.Tensor, size, mag='bilinear', min='area') -> torch.Tensor:
     if x.shape[3] == 4: # My data always has 4-dimension which is all 1 in the fourth channel, but we expect 3-dimension.
         x = x[:, :, :, :3]
-    assert (x.shape[1] >= size[0] and x.shape[2] >= size[1]) or (x.shape[1] < size[0] and x.shape[2] <= size[1]), "Trying to magnify image in one dimension and minify in the other"
+    assert (x.shape[1] >= size[0] and x.shape[2] >= size[1]) or (x.shape[1] <= size[0] and x.shape[2] <= size[1]), "Trying to magnify image in one dimension and minify in the other"
     y = x.permute(0, 3, 1, 2) # NHWC -> NCHW
     if x.shape[1] > size[0] and x.shape[2] > size[1]: # Minification, previous size was bigger
         y = torch.nn.functional.interpolate(y, size, mode=min)
