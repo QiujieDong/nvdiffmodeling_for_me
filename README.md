@@ -73,6 +73,7 @@ Unzip and place the subfolders in the project `data` folder, e.g., `data\skull`.
 All assets are copyright of their respective authors, see included license files for further details.
 
 Included examples
+- 'building.json' - Our data
 - `skull.json` - Joint normal map and shape optimization on a skull
 - `ewer.json`  - Ewer model from a reduced mesh as initial guess
 - `gardenina.json` - Aggregate geometry example
