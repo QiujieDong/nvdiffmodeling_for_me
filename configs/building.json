@@ -1,6 +1,6 @@
 {
     "base_mesh": "data/sphere.obj",
-    "ref_mesh": "data/building/-LOD0_c_hut_01.obj",
+    "file_path": "data/building",
     "camera_eye": [
         2.5,
         0.0,
@@ -21,6 +21,5 @@
     "train_res": 512,
     "batch": 8,
     "learning_rate": 0.03,
-    "min_roughness": 0.25,
-    "out_dir": "LOD0_c_hut_01"
+    "min_roughness": 0.25
 }

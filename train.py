@@ -461,12 +461,25 @@ def main():
 
     if FLAGS.display_res is None:
         FLAGS.display_res = FLAGS.train_res
-    if FLAGS.out_dir is None:
-        out_dir = 'out/cube_%d' % (FLAGS.train_res)
-    else:
-        out_dir = 'out/' + FLAGS.out_dir
+    # if FLAGS.out_dir is None:
+    #     out_dir = 'out/cube_%d' % (FLAGS.train_res)
+    # else:
+    #     out_dir = 'out/' + FLAGS.out_dir
 
-    optimize_mesh(FLAGS, out_dir)
+    # optimize_mesh(FLAGS, out_dir)
+
+    # loop for our data in the file path
+    file_list = sorted(os.listdir(FLAGS.file_path))
+    for file in file_list:
+        file.strip()
+        if os.path.splitext(file)[1] not in ['.obj']:
+            continue
+        print(os.path.join(FLAGS.file_path, file))
+
+        FLAGS.ref_mesh = os.path.join(FLAGS.file_path, file)
+        out_dir = os.path.join('out', os.path.splitext(file)[0])
+
+        optimize_mesh(FLAGS, out_dir)
 
 #----------------------------------------------------------------------------
 
