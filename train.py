@@ -140,7 +140,7 @@ def optimize_mesh(
 
     # Add trainable arguments according to config
     if not 'position' in FLAGS.skip_train:
-        trainable_list += [v_pos_opt]        
+        trainable_list += [v_pos_opt]
     if not 'normal' in FLAGS.skip_train:
         trainable_list += normal_map_opt.getMips()
     if not 'kd' in FLAGS.skip_train:
@@ -448,7 +448,7 @@ def main():
 
     FLAGS.camera_eye = [0.0, 0.0, RADIUS]
     FLAGS.camera_up  = [0.0, 1.0, 0.0]
-    FLAGS.skip_train = []
+    FLAGS.skip_train = ['position', 'normal', 'ks', 'displacement']
     FLAGS.displacement = 0.15
     FLAGS.mtl_override = None
 
